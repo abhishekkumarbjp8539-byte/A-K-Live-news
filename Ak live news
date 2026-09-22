@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A K LIVE NEWS | ताज़ा खबरें</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+    color:#222;
+}
+
+/* TOP HEADER */
+.top{
+    background:#d40000;
+    color:white;
+    padding:8px 15px;
+    text-align:center;
+    font-size:14px;
+}
+
+/* LOGO */
+header{
+    background:white;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 2px 5px #aaa;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#d40000;
+}
+
+.logo span{
+    color:#111;
+}
+
+/* MENU */
+nav{
+    background:#111;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+nav a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    padding:13px 15px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#d40000;
+}
+
+/* BREAKING */
+.breaking{
+    background:#fff;
+    margin:12px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.breaking-title{
+    background:#d40000;
+    color:white;
+    padding:12px;
+    font-weight:bold;
+}
+
+.breaking-text{
+    padding:10px;
+    white-space:nowrap;
+    animation:move 15s linear infinite;
+}
+
+@keyframes move{
+    from{transform:translateX(100%);}
+    to{transform:translateX(-100%);}
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:10px;
+}
+
+/* HERO NEWS */
+.hero{
+    background:white;
+    margin-bottom:15px;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 1px 5px #bbb;
+}
+
+.hero img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.hero-content{
+    padding:15px;
+}
+
+.hero h1{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.read{
+    display:inline-block;
+    background:#d40000;
+    color:white;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:4px;
+    margin-top:10px;
+}
+
+/* SECTION TITLE */
+.section-title{
+    background:#111;
+    color:white;
+    padding:12px;
+    border-left:5px solid #d40000;
+    margin:20px 0 12px;
+}
+
+/* NEWS GRID */
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.card{
+    background:white;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 1px 5px #ccc;
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:12px;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#555;
+    font-size:14px;
+}
+
+/* SUBMIT NEWS */
+.submit{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:6px;
+    box-shadow:0 1px 5px #ccc;
+}
+
+.submit input,
+.submit textarea,
+.submit select{
+    width:100%;
+    padding:12px;
+    margin:7px 0 12px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+.submit textarea{
+    height:120px;
+}
+
+.submit button{
+    width:100%;
+    background:#d40000;
+    color:white;
+    border:0;
+    padding:13px;
+    border-radius:4px;
+    font-size:16px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    margin-top:30px;
+    padding:25px 15px;
+}
+
+footer h2{
+    color:#ff3333;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#ccc;
+    font-size:14px;
+    margin:6px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    header{
+        padding:12px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .news-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero img{
+        height:210px;
+    }
+
+    .hero h1{
+        font-size:20px;
+    }
+
+    .card img{
+        height:200px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP -->
+<div class="top">
+    🔴 A K LIVE NEWS — ताज़ा खबरें सबसे पहले
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        A K <span>LIVE NEWS</span>
+    </div>
+</header>
+
+<!-- MENU -->
+<nav>
+    <a href="#">होम</a>
+    <a href="#">ब्रेकिंग न्यूज़</a>
+    <a href="#">लोकल न्यूज़</a>
+    <a href="#">देश</a>
+    <a href="#">दुनिया</a>
+    <a href="#">वीडियो</a>
+    <a href="#">फोटो</a>
+    <a href="#submit">अपनी खबर भेजें</a>
+</nav>
+
+<!-- BREAKING NEWS -->
+<div class="breaking">
+    <div class="breaking-title">BREAKING</div>
+
+    <div class="breaking-text">
+        बड़ी खबर: A K LIVE NEWS पर देखिए देश-दुनिया की ताज़ा खबरें...
+    </div>
+</div>
+
+<div class="container">
+
+<!-- MAIN NEWS -->
+<div class="section-title">
+    🔥 मुख्य खबर
+</div>
+
+<div class="hero">
+
+    <!-- अपनी फोटो यहाँ लगाएँ -->
+    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c"
+         alt="News">
+
+    <div class="hero-content">
+
+        <h1>
+            A K LIVE NEWS पर पढ़िए आज की बड़ी और महत्वपूर्ण खबर
+        </h1>
+
+        <p>
+            यहाँ आपकी मुख्य खबर का पूरा छोटा विवरण दिखाई देगा।
+            खबर की सही जानकारी और स्थान यहाँ लिखें।
+        </p>
+
+        <a href="#" class="read">
+            पूरी खबर पढ़ें →
+        </a>
+
+    </div>
+</div>
+
+
+<!-- LOCAL NEWS -->
+<div class="section-title">
+    📍 लोकल न्यूज़
+</div>
+
+<div class="news-grid">
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+             alt="News">
+
+        <div class="card-content">
+
+            <h3>
+                आपके क्षेत्र से आई बड़ी खबर
+            </h3>
+
+            <p>
+                यहाँ स्थानीय घटना की जानकारी लिखें।
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e"
+             alt="News">
+
+        <div class="card-content">
+
+            <h3>
+                शहर में हुई महत्वपूर्ण घटना
+            </h3>
+
+            <p>
+                यहाँ खबर का छोटा विवरण लिखें।
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1586339949916-3e9457bef6d3"
+             alt="News">
+
+        <div class="card-content">
+
+            <h3>
+                प्रशासन ने जारी की जानकारी
+            </h3>
+
+            <p>
+                यहाँ प्रशासन या संबंधित विभाग की जानकारी दें।
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- INDIA NEWS -->
+<div class="section-title">
+    🇮🇳 देश की खबरें
+</div>
+
+<div class="news-grid">
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620"
+             alt="India News">
+
+        <div class="card-content">
+
+            <h3>
+                देश की बड़ी खबर
+            </h3>
+
+            <p>
+                देश से जुड़ी महत्वपूर्ण खबर यहाँ लिखें।
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2"
+             alt="News">
+
+        <div class="card-content">
+
+            <h3>
+                नई जानकारी सामने आई
+            </h3>
+
+            <p>
+                खबर का छोटा विवरण यहाँ लिखें।
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf"
+             alt="News">
+
+        <div class="card-content">
+
+            <h3>
+                महत्वपूर्ण अपडेट
+            </h3>
+
+            <p>
+                ताज़ा अपडेट यहाँ प्रकाशित करें।
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- SUBMIT NEWS -->
+<div class="section-title" id="submit">
+    📢 अपनी खबर भेजें
+</div>
+
+<div class="submit">
+
+    <h2>
+        आपके आसपास कोई घटना हुई है?
+    </h2>
+
+    <p>
+        हमें खबर की जानकारी भेजें। प्रकाशित करने से पहले
+        जानकारी की जाँच करें।
+    </p>
+
+    <form>
+
+        <label>आपका नाम</label>
+
+        <input
+            type="text"
+            placeholder="अपना नाम लिखें"
+        >
+
+
+        <label>मोबाइल नंबर</label>
+
+        <input
+            type="tel"
+            placeholder="मोबाइल नंबर"
+        >
+
+
+        <label>घटना का स्थान</label>
+
+        <input
+            type="text"
+            placeholder="शहर / जिला / स्थान"
+        >
+
+
+        <label>खबर की श्रेणी</label>
+
+        <select>
+
+            <option>लोकल न्यूज़</option>
+            <option>ब्रेकिंग न्यूज़</option>
+            <option>देश</option>
+            <option>दुनिया</option>
+            <option>अन्य</option>
+
+        </select>
+
+
+        <label>खबर का विवरण</label>
+
+        <textarea
+            placeholder="घटना के बारे में पूरी जानकारी लिखें">
+        </textarea>
+
+
+        <button type="submit">
+            खबर भेजें
+        </button>
+
+    </form>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>A K LIVE NEWS</h2>
+
+    <p>
+        निष्पक्ष और विश्वसनीय समाचार के लिए आपका अपना न्यूज़ प्लेटफॉर्म।
+    </p>
+
+    <p>
+        © 2026 A K LIVE NEWS. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
